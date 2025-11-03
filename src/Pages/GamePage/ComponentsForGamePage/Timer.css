@@ -1,0 +1,24 @@
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    width: 16vw;
+    height: 10vh;
+  }
+  
+  .timer-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    font-weight: bold;
+    color: rgb(179, 179, 179);
+    background-color: rgb(68, 68, 68);
+    border-radius: 10px;
+    width: 20vw;
+    height: 10vh;
+    border: 3px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

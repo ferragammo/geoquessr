@@ -1,0 +1,161 @@
+.g_page_main_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.street-view-iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.street-view-iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.g_page_timer_for_round {
+    position: absolute;
+    top: 1vh;
+    left: 0;
+    width: 12vw;
+    height: 9vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);   
+}
+
+.g_page_btn_for_fullscreen {
+    position: absolute;
+    top: 1vh;
+    right: 0;
+    width: 4vw;
+    height: 7vh;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+} 
+
+.g_page_container_for_map {
+    position: absolute;
+    bottom: 1vh;
+    left: 0;
+    width: 25vw;
+    height: 40vh;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    transition: bottom 0.5s ease;
+}
+
+
+.g_page_container_for_map.g_page_container_shifted {
+    bottom: 8vh;
+}
+
+
+.g_page_btn_check_result {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    width: 25.3vw;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    background-color: rgb(68, 68, 68);
+    color: rgb(179, 179, 179);
+    height: 5vh;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;             
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.g_page_btn_check_result:active{
+    background-color: rgb(100,100,100);
+
+}
+
+
+.g_page_main_container_for_map {
+    opacity: 0.5;
+}
+
+.g_page_main_container_for_map:hover {
+    opacity: 1;
+}
+
+.g_page_main_container_checked {
+    opacity: 1;
+}
+
+
+.g_page_current_points {
+    position: absolute;
+    display: flex;
+    flex-direction: column; /* Расположение элементов по вертикали */
+    align-items: center;
+    justify-content: center;
+    top: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(68, 68, 68);
+    color: rgb(179, 179, 179);
+    font-size: xx-large;
+    font-weight: bold;
+    width: fit-content;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    height: auto; /* Убираем фиксированную высоту */
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+
+.g_page_btn_for_start_new_round{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%; 
+    transform: translateX(-50%);
+    bottom: 1vh;
+    background-color: rgb(68, 68, 68);
+    color: rgb(179, 179, 179);
+    font-size: xx-large;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.g_page_btn_for_start_new_round:hover{
+    background-color: rgb(100, 100, 100);
+}
+
+.g_page_btn_for_start_new_round:active{
+    background-color: rgb(68, 68, 68);
+}
+
+
+
+
+
+
+
+

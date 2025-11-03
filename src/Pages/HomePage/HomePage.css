@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Spicy+Rice&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.h_page_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 9999; 
+}
+
+.h_page_main_container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('D:\react\сoursework\coursework\public\1.jpg') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.greeting_to_the_user {
+    font-family: "Spicy Rice", serif;
+    position: absolute;
+    top: 0;
+    margin-top: 3vh;
+    color: rgb(94, 255, 0);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7vh;
+}
+
+.h_page_leaderboard {
+    width: 17vw;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: rgba(92, 86, 98, 0.7);
+    border: 2px solid black;
+    position: absolute; 
+    top: 50%; 
+    left: 4vw; 
+    transform: translateY(-50%); 
+}
+
+.h_page_choose_mode_window{
+    width: 16vw;
+    height: 28vh;
+    border-radius: 20px;
+    background-color: rgba(92, 86, 98, 0.7);
+    border: 2px solid black;
+    position: absolute; 
+    top: 50%; 
+    right: 4vw; 
+    transform: translateY(-50%); 
+}
+
+.h_page_title_of_menu_common {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Spicy Rice", serif;
+    font-size: x-large;
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    color: rgb(94, 255, 0);
+}
+
+.h_page_title_of_menu_settings {
+    border-bottom: black 1px solid;
+}
+
+
+.h_page_settings {
+    font-family: "Spicy Rice", serif;
+    font-size: larger;
+    width: 100%;
+    height: 4vh;
+    padding-left: 0.5vw;
+    padding-top: 0.5vh;
+    color: rgb(94, 255, 0);
+}
+
+.h_page_container_of_modes_common {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+
+.h_page_container_of_modes_leaderboard{
+    padding-bottom: 1vh;
+}
+
+.h_page_container_of_modes_settings{
+    padding-bottom: 2vh;
+}
+
+.h_page_container_of_modes {
+    display: flex;
+}
+
+.h_page_button_radio {
+    position: relative;
+    border-radius: 5px;
+    background-color: rgb(67, 61, 73); 
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.h_page_button_radio input {
+    display: none; 
+}
+
+.h_page_button_radio input:checked + .h_page_text_in_button_radio {
+    background-color: rgb(94, 255, 0); 
+    color: black; 
+    
+}
+
+.h_page_button_radio:hover {
+    background-color: rgb(101, 95, 110); 
+    border-color: #5a575f; 
+}
+
+.h_page_button_radio:hover input:checked + .h_page_text_in_button_radio {
+    background-color: rgb(108, 255, 43); 
+}
+
+.h_page_text_in_button_radio {
+    width: 4.5vw;
+    height: 4vh;
+    font-family: "Spicy Rice", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    color: rgb(94, 255, 0); 
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.h_page_button_radio input:checked + .h_page_text_in_button_radio {
+    background-color: rgb(94, 255, 0);
+    color: black; 
+}
+
+.h_page_button_radio input:focus + .h_page_text_in_button_radio {
+    outline: none;
+    border-color: #4e4a52; 
+}
+
+
+.h_page_start_game{
+    font-family: "Spicy Rice", serif;
+    font-size: x-large;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-top: 2vh;
+    margin-bottom: 0;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: rgb(94, 255, 0);
+    border: 2px solid black;
+    text-align: center;
+}
+
+.h_page_start_game:hover{
+    background-color: rgb(88, 254, 166);
+    cursor: pointer;
+}
+
+.h_page_start_game:active{
+    background-color: rgb(94, 255, 0);
+    cursor: pointer;
+}
+
+.h_page_result_in_leaderboard{
+    margin-top: 1vh;
+    margin-left: 0.4vw;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: "Spicy Rice", serif;
+    color: rgb(94, 255, 0);
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    background-color: rgb(69, 63, 76);
+}
+
+.h_page_result_in_leaderboard:last-child{
+    margin-bottom: 0.7vh ;
+}
+
+.looser {
+    position: relative;  
+}
+
+.looser::before {
+    content: "";  
+    position: absolute;
+    top: -0.6vh;
+    left: -7px; 
+    width: 106%;
+    height: 1px;
+    background-color: black;  
+}
+
+
+
+
+.h_page_username_in_leaderboard{
+    margin-left: 0.5vw;
+}
+
+.h_page_points_in_leaderboard{
+    margin-right: 0.5vw;
+}
+
+
+
+@keyframes shrinkAndExpand {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(0.3); 
+    }
+    100% {
+        transform: scale(7); 
+    }
+}
+
+.h_page_planet {
+    width: 60vw;
+    height: 67vh;
+    background: url('D:/react/сoursework/coursework/public/2.webp') center center / cover no-repeat;
+    margin-top: 10vh;
+    transition: transform 0.5s ease;
+    animation: moveUpDown 5s ease-in-out infinite;
+    z-index: 50;
+}
+
+
+.h_page_planet.animate {
+    animation: shrinkAndExpand 2s ease forwards; 
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-2vh); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+.h_page_container_for_welcome_menu {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    height: 40vh;
+    background-color: rgb(69, 63, 76);
+    z-index: 10000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.h_page_title_of_welcome_menu{
+    font-family: "Spicy Rice", serif;
+    color: rgb(94, 255, 0);
+    font-size: 6vh;
+    margin-top: 5vh;
+}
+
+.h_page_input_for_username {
+    font-family: "Spicy Rice", serif;
+    text-align: center;
+    margin-top: 5vh;
+    width: 20vw;
+    background-color: rgb(94, 255, 0);
+    border: none;
+    border-radius: 10px;
+    height: 8vh;
+    font-size: x-large;
+}
+
+.h_page_input_for_username:focus {
+    outline: none; 
+    box-shadow: none;
+    border: 1px solid white;
+}
+
+.h_page_button_of_welcome_menu{
+    font-family: "Spicy Rice", serif;
+    margin-top: 4vh;
+    font-size: large;
+    background-color: rgb(56, 51, 61);
+    color: rgb(94, 255, 0);
+    border-radius: 7px;
+    width: 14vw;
+    height: 5vh;
+    border: none;
+}
+
+.h_page_button_of_welcome_menu:hover{
+    background-color: rgb(91, 85, 98);
+}
+
+.h_page_button_of_welcome_menu:active{
+    background-color: rgb(56, 51, 61);
+}
+
+.h_page_leaderboard_no_results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Spicy Rice", serif;
+    color: rgb(94, 255, 0);
+    font-size: 3vh;
+}
+
+
+.highlight_current_user {
+    background-color: rgb(94, 255, 0); /* Зеленый фон */
+    color: black; /* Цвет текста */
+    font-weight: bold; /* Жирный текст */
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: moveStar linear forwards;
+    pointer-events: none;
+}
+
+.star.trail {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                0 0 20px rgba(255, 255, 255, 0.6), 
+                0 0 30px rgba(255, 255, 255, 0.4);
+    filter: blur(1px);
+    opacity: 0.9;
+}
+
+@keyframes moveStar {
+    from {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+    }
+    to {
+        transform: translate(var(--move-x), var(--move-y)) scale(0.1);
+        opacity: 0;
+    }
+}

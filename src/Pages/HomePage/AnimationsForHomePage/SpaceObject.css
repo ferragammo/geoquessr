@@ -1,0 +1,19 @@
+.space-object {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    transition: transform 0.2s linear, opacity 0.5s ease;
+}
+
+.rocket {
+    background-image: url('D:/react/сoursework/coursework/public/rocket.png');
+}
+
+.saucer {
+    background-image: url('D:/react/сoursework/coursework/public/ufo.png');
+}
+
+.asteroid {
+    background-image: url('D:/react/сoursework/coursework/public/asteroid.png');
+}
