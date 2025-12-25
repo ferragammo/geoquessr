@@ -2,7 +2,6 @@
   "name": "coursework",
   "version": "0.1.0",
   "private": true,
-  "main": "main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -15,10 +14,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start-react": "react-scripts start",
-    "start-electron": "cross-env ELECTRON_START_URL=http://localhost:3000 electron .",
-    "start": "concurrently \"npm run start-react\" \"npm run start-electron\"",
-    "build": "react-scripts build && electron-builder"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -37,29 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "concurrently": "^9.1.0",
-    "cross-env": "^7.0.3",
-    "electron": "^33.2.0",
-    "electron-builder": "^25.1.8",
-    "wait-on": "^9.0.1"
-  },
-  "build": {
-    "appId": "com.example.coursework",
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "build/**/*",
-      "main.js",
-      "preload.js"
-    ],
-    "win": {
-      "target": "nsis"
-    },
-    "mac": {
-      "target": "dmg"
-    }
   }
 }

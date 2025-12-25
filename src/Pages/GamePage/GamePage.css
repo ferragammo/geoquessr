@@ -26,8 +26,8 @@
     position: absolute;
     top: 1vh;
     left: 0;
-    width: 12vw;
-    height: 9vh;
+    width: 8vw;
+    height: 5   vh;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(6px);   
 }
@@ -47,8 +47,8 @@
     position: absolute;
     bottom: 1vh;
     left: 0;
-    width: 25vw;
-    height: 40vh;
+    width: 23vw;
+    height: 35vh;
     border: 3px solid #000000;
     border-radius: 5px;
     transition: bottom 0.5s ease;
@@ -64,7 +64,7 @@
     position: absolute;
     bottom: 2vh;
     left: 0;
-    width: 25.3vw;
+    width: 23.3vw;
     border: 3px solid #000000;
     border-radius: 5px;
     background-color: rgb(68, 68, 68);
@@ -108,7 +108,7 @@
 .g_page_current_points {
     position: absolute;
     display: flex;
-    flex-direction: column; /* Расположение элементов по вертикали */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     top: 1vh;
@@ -121,7 +121,7 @@
     width: fit-content;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
-    height: auto; /* Убираем фиксированную высоту */
+    height: auto; 
     border-radius: 5px;
     border: 3px solid black;
 }
