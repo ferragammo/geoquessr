@@ -5,7 +5,7 @@ import { calculatePoints } from '../../Utils/calculatePoints.js';
 import { LocationsForEasyMode } from '../../CoordinatesOfPlaces/EasyMode.js';
 import { LocationsForMediumMode } from '../../CoordinatesOfPlaces/MediumMode.js';
 import { LocationsForHardMode } from '../../CoordinatesOfPlaces/HardMode.js';
-import { saveResult } from '../../StoreResults/IndexedDB.js';
+import { saveResult } from '../../Services/ApiService.js';
 import Timer from './ComponentsForGamePage/Timer.jsx';
 import StreetView from "./ComponentsForGamePage/StreetView.jsx";
 import Ymap from "./ComponentsForGamePage/Ymap.jsx";
