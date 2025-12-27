@@ -1,6 +1,6 @@
 // src/Services/ApiService.js
 
-const BASE_URL = 'https://tim1423-geoguessr.hf.space/api';
+const BASE_URL = '/api';
 
 export const getLeaderboard = async (mode) => {
   try {
@@ -93,7 +93,7 @@ export const saveResult = async (nickname, points, mode) => {
   }
 };
 
-export const getRandomLocationsApi = async (mode, amountOfRounds ) => {
+export const  getRandomLocationsApi = async (mode, amountOfRounds ) => {
   try {
     const response = await fetch(
       `${BASE_URL}/location/start-game/${mode}?amountOfRounds=${amountOfRounds}`
