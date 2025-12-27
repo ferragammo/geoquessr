@@ -20,6 +20,8 @@ const HomePage = () => {
     const [currentUserScore, setCurrentUserScore] = useState(null);
     const [isLoadingLeaderboard, setIsLoadingLeaderboard] = useState(false);
     const [isLoadingUserScore, setIsLoadingUserScore] = useState(false);
+    const location = useLocation();
+
 
     // Загрузка результата конкретного пользователя
     useEffect(() => {
@@ -59,7 +61,7 @@ const HomePage = () => {
         };
 
         fetchUserScore();
-    }, [leaderboardMode, userName]);
+    }, [leaderboardMode, userName, location.key]);
 
     // Загрузка топ-10 лидеров
     useEffect(() => {
@@ -85,7 +87,7 @@ const HomePage = () => {
         };
 
         fetchLeaderboard();
-    }, [leaderboardMode]);
+    }, [leaderboardMode, location.key]);
 
     const handleModeChange = (mode) => {
         setSelectedMode(mode);
@@ -102,6 +104,7 @@ const HomePage = () => {
     const handleLeaderboardModeChange = (mode) => {
         setLeaderboardMode(mode);
     };
+
 
     const handleNewTrip = () => {
         if (planetRef.current) {
@@ -183,6 +186,7 @@ const HomePage = () => {
                         )}
                     </>
                 ) : (
+
                     <div className='h_page_leaderboard_no_results'>No results available</div>
                 )}
             </div>
