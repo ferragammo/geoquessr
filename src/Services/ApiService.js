@@ -92,3 +92,36 @@ export const saveResult = async (nickname, points, mode) => {
     throw error;
   }
 };
+
+export const getRandomLocationsApi = async (mode, amountOfRounds ) => {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/location/start-game/${mode}?amountOfRounds=${amountOfRounds}`
+    );
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    if (!data.successful) {
+      throw new Error(data.error || 'Failed to fetch leaderboard');
+    }
+     
+    const randomLocations = data.data.map(location => ({
+      id: location.id,
+      name: location.name,
+      city: location.city,
+      country: location.country,
+      mode: location.mode,
+      latitude: location.latitude,
+      longitude: location.longitude
+    }));
+    console.log(randomLocations);
+    return randomLocations;
+  } catch (error) {
+    console.error('Error fetching leaderboard:', error);
+    throw error;
+  }
+};
